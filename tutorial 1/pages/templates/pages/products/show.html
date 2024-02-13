@@ -1,0 +1,29 @@
+{% extends 'pages/base.html' %}
+{% block title %} {{title}} {% endblock %}
+{% block header_title %} {{subtitle}} {% endblock %}
+
+{% block content %}
+<div class="card mb-3">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="https://static.djangoproject.com/img/logos/django-logo-positive.svg"
+                class="img-fluid rounded-start">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                {% if product.price|floatformat > 100 %}
+                    <h5 class="card-title" style="color: purple;"> 
+                {% else %} 
+                    <h5 class="card-title" style="color: red;"> 
+                {% endif %} 
+                    {{product.name}}
+                </h5>
+                    <h6 class="card-title">
+                        <p>El precio es: {{product.price}}$ </p>
+                    </h6>
+                    <p class="card-text">{{product.description}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
