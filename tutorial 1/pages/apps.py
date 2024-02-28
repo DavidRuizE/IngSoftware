@@ -8,5 +8,5 @@ class PagesConfig(AppConfig):
     name = 'pages'
 
     
-def ready(self):
-        ImageStorageClass = import_string(settings.IMAGE_STORAGE_CLASS)
+    def ready(self):
+            ImageStorageClass = import_string(settings.IMAGE_STORAGE_CLASS)

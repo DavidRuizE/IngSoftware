@@ -1,5 +1,5 @@
 from django.urls import path
-from .utils import ImageLocalStorage
+from pages.utils import ImageLocalStorage
 from .views import *
 
 urlpatterns = [
