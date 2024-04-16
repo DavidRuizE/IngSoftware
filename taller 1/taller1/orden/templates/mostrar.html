@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %} {{title}} {% endblock %}
+{% block header_title %} {{subtitle}} {% endblock %}
+
+{% block content %}
+<div class="principal">
+    <h1 style="color: rgb(90, 84, 84); font-size: 60px">{{ID}}</h1>
+    <p style="color: black;">Producto 1: {{Producto1}}</p>
+    <p style="color: black;">Producto 2: {{Producto2}}</p>
+    <p style="color: black;">Producto 3: {{Producto3}}</p>
+    <p style="color: black;">Producto 4: {{Producto4}}</p>
+    <form action="{% url 'borrar' ID %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Borar orden</button>
+</div>
+{% endblock %}

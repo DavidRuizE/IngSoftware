@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block title %}CAOZ - ORDEN{% endblock %}
+{% block content %}
+
+<h1 style="color: rgb(90, 84, 84); font-size: 60px">Crear orden</h1>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="card-body">
+            {% if form.errors %}
+            <ul id="errors" class="alert alert-danger list-unstyled">
+                {% for field, errors in form.errors.items %}
+                {% for error in errors %}
+                <li>{{ error }}</li>
+                {% endfor %}
+                {% endfor %}
+            </ul>
+            {% endif %}
+            <form method="POST" action="{% url 'crear' %}">
+                {% csrf_token %}
+                <input type="text" class="form-control mb-2" placeholder="Producto 1" name="producto1"
+                    value="{{form.data.producto1 }}" />
+                <input type="text" class="form-control mb-2" placeholder="Producto 2" name="producto2"
+                    value="{{form.data.producto2 }}" />
+                <input type="text" class="form-control mb-2" placeholder="Producto 3" name="producto3"
+                    value="{{form.data.producto3 }}" />
+                <input type="text" class="form-control mb-2" placeholder="Producto 4" name="producto4"
+                    value="{{form.data.producto4 }}" />
+                <input type="submit" class="btn btn-secondary" value="Send" />
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

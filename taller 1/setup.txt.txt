@@ -1,0 +1,4 @@
+Nada en especifico que hacer, correr migraciones para cargar modelo y queda listo
+
+Nombre: David Ruiz Echeverri
+Clase: Orden

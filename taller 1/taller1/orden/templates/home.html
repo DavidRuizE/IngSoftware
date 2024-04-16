@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}CAOZ - ORDEN{% endblock %}
+{% block content %}
+<h1 style="color: rgb(90, 84, 84); font-size: 60px">CAOZ</h1>
+<h3 style="color: black;" >¿Qué es una orden?</h3>
+<p style="color: black;" >Una orden dentro de nuestra aplicación CAOZ es <br>el lugar donde prodrás ver los productos que has adquirido.</p>
+<br>
+<br>
+<div class = "button-container">
+<div class="boton"><a mat-raised-button href="{% url 'crear' %}">Crea una nueva orden</a> </div>
+<div class="boton"><a mat-raised-button href="{% url 'ver' %}">Ver lista de ordenes</a> </div>
+</div>
+{% endblock %}
